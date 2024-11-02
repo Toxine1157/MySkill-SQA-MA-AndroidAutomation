@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.11.2 on win32)" generated="2024-11-02T21:32:34.386964" rpa="false" schemaversion="5">
+<suite id="s1" name="Apkdietmeal" source="E:\MySkill\SQA-Mobile Automation\Android Automation\apkdietmeal.robot">
+<kw name="Open Application_DietMeal" type="SETUP">
+<kw name="Set Appium Timeout" owner="AppiumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" start="2024-11-02T21:32:34.657105" elapsed="0.001002"/>
+</kw>
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER_URL}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>autoGrantPermissions=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-11-02T21:32:34.658107" elapsed="8.454307"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T21:32:45.114357" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T21:32:43.113415" elapsed="2.000942"/>
+</kw>
+<status status="PASS" start="2024-11-02T21:32:34.657105" elapsed="10.457252"/>
+</kw>
+<test id="s1-t1" name="User Login" line="16">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T21:32:49.115066" level="INFO">Slept 4 seconds.</msg>
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T21:32:45.114357" elapsed="4.000709"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-11-02T21:32:49.529161" level="INFO">Current page contains element '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]'.</msg>
+<msg time="2024-11-02T21:32:49.529161" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]</msg>
+<arg>//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-11-02T21:32:49.115066" elapsed="0.414095"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-11-02T21:32:49.530162" level="INFO">Typing text 'Sambal' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]'</msg>
+<msg time="2024-11-02T21:32:50.594927" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]</msg>
+<arg>//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]</arg>
+<arg>Sambal</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-11-02T21:32:49.529161" elapsed="1.065766"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T21:32:52.595931" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T21:32:50.595919" elapsed="2.000012"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-11-02T21:32:52.596933" level="INFO">Typing text '65' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]'</msg>
+<msg time="2024-11-02T21:32:53.154984" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]</msg>
+<arg>//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]</arg>
+<arg>65</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-11-02T21:32:52.595931" elapsed="0.559053"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T21:32:55.156716" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T21:32:53.155985" elapsed="2.000731"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-11-02T21:32:55.157720" level="INFO">Typing text '165' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]'</msg>
+<msg time="2024-11-02T21:32:55.717067" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]</msg>
+<arg>//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]</arg>
+<arg>165</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-11-02T21:32:55.156716" elapsed="0.560351"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T21:32:57.717161" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T21:32:55.717067" elapsed="2.000094"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-11-02T21:32:57.718162" level="INFO">Clicking element '//android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_male"]'.</msg>
+<msg time="2024-11-02T21:32:57.814154" level="INFO">xpath criteria: //android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_male"]</msg>
+<arg>//android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_male"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-11-02T21:32:57.717161" elapsed="0.096993"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T21:32:59.815249" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T21:32:57.815155" elapsed="2.000094"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-11-02T21:32:59.816253" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.fghilmany.dietmealapp:id/bt_next"]'.</msg>
+<msg time="2024-11-02T21:32:59.897043" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.fghilmany.dietmealapp:id/bt_next"]</msg>
+<arg>//android.widget.Button[@resource-id="com.fghilmany.dietmealapp:id/bt_next"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-11-02T21:32:59.815249" elapsed="0.081794"/>
+</kw>
+<status status="PASS" start="2024-11-02T21:32:45.114357" elapsed="14.782686"/>
+</test>
+<test id="s1-t2" name="Fill A Form" line="33">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T21:33:02.898899" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T21:32:59.898597" elapsed="3.000302"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-11-02T21:33:02.930110" level="INFO">Current page contains element '//android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_rest"]'.</msg>
+<msg time="2024-11-02T21:33:02.930110" level="INFO">xpath criteria: //android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_rest"]</msg>
+<arg>//android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_rest"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-11-02T21:33:02.898899" elapsed="0.031211"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-11-02T21:33:02.931111" level="INFO">Clicking element '//android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_rest"]'.</msg>
+<msg time="2024-11-02T21:33:03.014159" level="INFO">xpath criteria: //android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_rest"]</msg>
+<arg>//android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_rest"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-11-02T21:33:02.930110" elapsed="0.084049"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T21:33:05.015043" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T21:33:03.014159" elapsed="2.000884"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-11-02T21:33:05.016044" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.fghilmany.dietmealapp:id/bt_finish"]'.</msg>
+<msg time="2024-11-02T21:33:05.097041" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.fghilmany.dietmealapp:id/bt_finish"]</msg>
+<arg>//android.widget.Button[@resource-id="com.fghilmany.dietmealapp:id/bt_finish"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-11-02T21:33:05.015043" elapsed="0.081998"/>
+</kw>
+<status status="PASS" start="2024-11-02T21:32:59.898088" elapsed="5.198953"/>
+</test>
+<test id="s1-t3" name="Open Pop Ice Meal" line="41">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T21:33:07.098509" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T21:33:05.098043" elapsed="2.000553"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2024-11-02T21:33:07.211666" level="INFO">Current page contains element '//android.widget.FrameLayout[@content-desc="Meals"]'.</msg>
+<msg time="2024-11-02T21:33:07.211666" level="INFO">xpath criteria: //android.widget.FrameLayout[@content-desc="Meals"]</msg>
+<arg>//android.widget.FrameLayout[@content-desc="Meals"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2024-11-02T21:33:07.098596" elapsed="0.113070"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-11-02T21:33:07.212667" level="INFO">Clicking element '//android.widget.FrameLayout[@content-desc="Meals"]'.</msg>
+<msg time="2024-11-02T21:33:08.031234" level="INFO">xpath criteria: //android.widget.FrameLayout[@content-desc="Meals"]</msg>
+<arg>//android.widget.FrameLayout[@content-desc="Meals"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-11-02T21:33:07.211666" elapsed="0.819568"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T21:33:10.032401" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T21:33:08.032235" elapsed="2.000166"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-11-02T21:33:10.033398" level="INFO">Clicking element '//androidx.recyclerview.widget.RecyclerView[@resource-id="com.fghilmany.dietmealapp:id/rv_meal"]/android.view.ViewGroup[5]'.</msg>
+<msg time="2024-11-02T21:33:11.296379" level="INFO">xpath criteria: //androidx.recyclerview.widget.RecyclerView[@resource-id="com.fghilmany.dietmealapp:id/rv_meal"]/android.view.ViewGroup[5]</msg>
+<arg>//androidx.recyclerview.widget.RecyclerView[@resource-id="com.fghilmany.dietmealapp:id/rv_meal"]/android.view.ViewGroup[5]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-11-02T21:33:10.032401" elapsed="1.263978"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T21:33:16.296692" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T21:33:11.296379" elapsed="5.000313"/>
+</kw>
+<status status="PASS" start="2024-11-02T21:33:05.097041" elapsed="11.199651"/>
+</test>
+<kw name="Close Application_DietMeal" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-11-02T21:33:16.297693" elapsed="0.186740"/>
+</kw>
+<status status="PASS" start="2024-11-02T21:33:16.297693" elapsed="0.186740"/>
+</kw>
+<status status="PASS" start="2024-11-02T21:32:34.388692" elapsed="42.095741"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Apkdietmeal">Apkdietmeal</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
